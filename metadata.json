@@ -1,0 +1,6 @@
+{
+  "name": "The Obsidian Grid",
+  "description": "Post-apocalyptic contingency planning and modern resilience database.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
