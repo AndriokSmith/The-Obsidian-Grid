@@ -2,15 +2,21 @@ import React from 'react';
 import { motion } from 'motion/react';
 
 const CATEGORIES = [
-  { id: 'shelter', title: 'HOME & SHELTER', icon: '🏠', desc: 'Structural reinforcement, bug-in barricades, and secure perimeter setup.' },
-  { id: 'water', title: 'WATER PROCUREMENT', icon: '💧', desc: 'Redundant filtration systems, rainwater catchment, and long-term storage.' },
-  { id: 'food', title: 'FOOD STORAGE', icon: '🥫', desc: 'Calories, macro-rotation, canning protocols, and deep pantry management.' },
-  { id: 'power', title: 'OFF-GRID POWER', icon: '⚡', desc: 'Solar generators, EMP hardening, and localized blackout power grids.' },
-  { id: 'medical', title: 'MEDICAL & FIRST AID', icon: '✚', desc: 'Post-antibiotic trauma care, surgical kits, and contagion containment.' },
-  { id: 'security', title: 'SECURITY & DEFENSE', icon: '🛡️', desc: 'Asymmetric defense, stealth protocols, and tactical evasion techniques.' },
-  { id: 'comms', title: 'SIGNAL & COMMS', icon: '📡', desc: 'Ham radio operation, emergency broadcast beacons, and information security.' },
-  { id: 'evacuation', title: 'EVACUATION & MOBILITY', icon: '🗺️', desc: 'Emergency route planning, vehicle preparation, and navigating safely without a GPS network.' },
-  { id: 'trade', title: 'TRADE & BARTER', icon: '⚖️', desc: 'Trading without cash, choosing high-value supplies, and building simple community sharing networks.' },
+  { id: 'water', title: 'WATER PROCUREMENT', icon: '💧', desc: 'Filtration, rationing, and purification.' },
+  { id: 'food', title: 'FOOD STORAGE', icon: '🥫', desc: 'Calories, macro-rotation, and canning protocols.' },
+  { id: 'medical', title: 'MEDICAL & TRAUMA', icon: '✚', desc: 'Post-antibiotic care and tactical first aid.' },
+  { id: 'shelter', title: 'SHELTER & BUG-IN', icon: '🏠', desc: 'Structural reinforcement and safe rooms.' },
+  { id: 'fire', title: 'FIRE & HEAT', icon: '🔥', desc: 'Primitive fire making, stoves, and thermals.' },
+  { id: 'navigation', title: 'OFF-GRID NAVIGATION', icon: '🧭', desc: 'Topological maps, compass reading, and stars.' },
+  { id: 'radio', title: 'RADIO & COMMS', icon: '📡', desc: 'Ham radios, bounce signals, and mesh networks.' },
+  { id: 'bushcraft', title: 'BUSHCRAFT', icon: '🪓', desc: 'Wilderness survival and primitive engineering.' },
+  { id: 'urban', title: 'URBAN SURVIVAL', icon: '🏙️', desc: 'Scavenging, evasion, and gray man theory.' },
+  { id: 'cyber', title: 'CYBER SURVIVAL', icon: '💻', desc: 'Data privacy, OPSEC, and digital ghosting.' },
+  { id: 'power', title: 'POWER OUTAGES', icon: '⚡', desc: 'Backup generators and solar grids.' },
+  { id: 'emp', title: 'EMP PREPAREDNESS', icon: '🛡️', desc: 'Faraday cages and protecting electronics.' },
+  { id: 'nuclear', title: 'NUCLEAR FALLOUT', icon: '☢️', desc: 'Radiation shielding and iodide rationing.' },
+  { id: 'war', title: 'WAR ZONE & CIVIL UNREST', icon: '⚔️', desc: 'Conflict zones and asymmetric threats.' },
+  { id: 'pandemic', title: 'PANDEMIC / OUTBREAK', icon: '☣️', desc: 'Isolation protocols and bio-hazard gear.' }
 ];
 
 export function SurvivalView() {

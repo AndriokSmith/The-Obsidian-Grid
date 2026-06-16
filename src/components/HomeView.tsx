@@ -6,7 +6,7 @@ export function HomeView() {
   return (
     <main className="pt-16 max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-0 border-x border-[var(--border-color)]">
       {/* Hero Section */}
-      <section className="col-span-full border-b border-[var(--border-color)] relative overflow-hidden flex flex-col items-center justify-center py-32 md:py-48 text-center bg-[var(--bg-secondary)]/30">
+      <section className="col-span-full border-b border-[var(--border-color)] relative overflow-hidden flex flex-col items-center justify-center pt-32 pb-24 text-center bg-[var(--bg-secondary)]/30">
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(ellipse_at_center,_var(--text-secondary)_1px,_transparent_1px)] bg-[size:24px_24px]"></div>
         <div className="relative z-10 max-w-4xl px-4">
           <motion.h1 
@@ -32,6 +32,24 @@ export function HomeView() {
           >
             ACCESS PROTOCOLS
           </motion.button>
+        </div>
+      </section>
+
+      {/* Threat Level Dashboard */}
+      <section className="col-span-full border-b border-[var(--border-color)] bg-[var(--bg-primary)]">
+        <div className="grid grid-cols-1 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-[var(--border-color)]">
+          <div className="p-6 flex flex-col justify-center items-center md:items-start">
+            <span className="text-xs font-mono text-[var(--text-secondary)] tracking-widest mb-1">GLOBAL THREAT LEVEL</span>
+            <div className="flex items-end gap-3">
+              <span className="text-4xl font-bold text-orange-500 font-mono">ELEVATED</span>
+            </div>
+          </div>
+          <div className="p-6 md:col-span-3 flex flex-col justify-center relative overflow-hidden">
+            <span className="text-xs font-mono text-[var(--text-secondary)] tracking-widest mb-2">LIVE INTEL FEED</span>
+            <div className="font-mono text-sm text-[var(--text-primary)] truncate">
+              [ <span className="text-[var(--accent-primary)]">NEW</span> ] CME (Coronal Mass Ejection) warning elevated for Northern Hemisphere. Geomagnetic storms predicted. Ensure sensitive electronics are shielded...
+            </div>
+          </div>
         </div>
       </section>
 
