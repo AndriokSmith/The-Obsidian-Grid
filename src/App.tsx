@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Instagram, Facebook } from 'lucide-react';
 import { HomeView } from './components/HomeView';
 import { SurvivalView } from './components/SurvivalView';
 import { StoreView } from './components/StoreView';
@@ -88,16 +88,34 @@ export default function App() {
       {currentView === 'systems' && <SystemsView />}
 
       {/* Footer */}
-      <footer className="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-center gap-6 border-x border-[var(--border-color)] text-center md:text-left bg-[var(--bg-primary)]">
-        <div className="font-mono text-sm text-[var(--text-secondary)]">
-          &copy; {new Date().getFullYear()} THE OBSIDIAN GRID. ALL RIGHTS RESERVED.
+      <footer className="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-center gap-8 border-x border-[var(--border-color)] text-center md:text-left bg-[var(--bg-primary)]">
+        <div className="flex flex-col gap-2">
+          <div className="font-mono text-sm text-[var(--text-secondary)]">
+            &copy; {new Date().getFullYear()} THE OBSIDIAN GRID. ALL RIGHTS RESERVED.
+          </div>
+          <div className="text-xs text-[var(--text-secondary)]/60 max-w-lg font-mono">
+            DISCLAIMER: Information provided for educational and contingency planning purposes only.
+          </div>
         </div>
-        <div className="text-xs text-[var(--text-secondary)]/60 max-w-lg font-mono">
-          DISCLAIMER: Information provided for educational and contingency planning purposes only.
+        
+        <div className="flex flex-col items-center md:items-end gap-6 w-full md:w-auto mt-8 md:mt-0">
+          <div className="flex items-center gap-4">
+            <a href="https://x.com/theobsidiangrid" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full flex items-center justify-center border border-[var(--border-color)] bg-[var(--bg-secondary)] text-[var(--text-secondary)] hover:border-[var(--accent-primary)] hover:text-[var(--accent-primary)] transition-all" aria-label="X (Twitter)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
+              </svg>
+            </a>
+            <a href="https://facebook.com/theobsidiangrid" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full flex items-center justify-center border border-[var(--border-color)] bg-[var(--bg-secondary)] text-[var(--text-secondary)] hover:border-[var(--accent-primary)] hover:text-[var(--accent-primary)] transition-all" aria-label="Facebook">
+              <Facebook size={18} />
+            </a>
+            <a href="https://instagram.com/theobsidiangridofficial" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full flex items-center justify-center border border-[var(--border-color)] bg-[var(--bg-secondary)] text-[var(--text-secondary)] hover:border-[var(--accent-primary)] hover:text-[var(--accent-primary)] transition-all" aria-label="Instagram">
+              <Instagram size={18} />
+            </a>
+          </div>
+          <a href="#" className="font-mono text-sm text-[var(--accent-primary)] hover:text-white transition-colors tracking-widest mt-2 border border-[var(--accent-primary)] px-4 py-2 hover:bg-[var(--accent-primary)]/10">
+            [ VERIFY NETWORK STATUS ]
+          </a>
         </div>
-        <a href="#" className="font-mono text-sm text-[var(--accent-primary)] hover:text-white transition-colors tracking-widest">
-          [ NETWORK STATUS ]
-        </a>
       </footer>
     </div>
   );
