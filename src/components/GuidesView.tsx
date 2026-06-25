@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import { Printer } from 'lucide-react';
 
 export function GuidesView() {
   const [selectedGuide, setSelectedGuide] = useState<string | null>(null);
@@ -77,7 +78,14 @@ export function GuidesView() {
         If the call goes straight to voicemail, your shield works perfectly. It is successfully blocking wireless signals. If your phone rings inside the can, electrical waves are still leaking in. Check your lid fit and make sure the foil seal is tight.
       </blockquote>
       
-      <div className="mt-12 flex justify-center pt-8 border-t border-[var(--border-color)]">
+      <div className="mt-12 flex flex-col sm:flex-row justify-center gap-4 pt-8 border-t border-[var(--border-color)]">
+        <button 
+          onClick={() => window.print()}
+          className="px-6 py-3 border border-[var(--border-color)] hover:border-[var(--accent-primary)] text-[var(--text-primary)] hover:text-[var(--accent-primary)] transition-colors font-mono tracking-widest text-sm uppercase flex items-center justify-center gap-2"
+        >
+          <Printer size={16} />
+          [ PRINT PHYSICAL ARCHIVE ]
+        </button>
         <button 
           onClick={() => setSelectedGuide(null)}
           className="px-6 py-3 border border-[var(--border-color)] hover:border-[var(--accent-primary)] text-[var(--text-secondary)] hover:text-[var(--accent-primary)] transition-colors font-mono tracking-widest text-sm uppercase"
@@ -169,7 +177,14 @@ export function GuidesView() {
         Filtering removes dirt, mud, and sand. Purifying kills live bugs and bacteria. For the safest possible drink, always filter the dirt out <em>first</em>, then boil or bleach the water <em>second</em>.
       </div>
       
-      <div className="mt-12 flex justify-center pt-8 border-t border-[var(--border-color)]">
+      <div className="mt-12 flex flex-col sm:flex-row justify-center gap-4 pt-8 border-t border-[var(--border-color)]">
+        <button 
+          onClick={() => window.print()}
+          className="px-6 py-3 border border-[var(--border-color)] hover:border-[var(--accent-primary)] text-[var(--text-primary)] hover:text-[var(--accent-primary)] transition-colors font-mono tracking-widest text-sm uppercase flex items-center justify-center gap-2"
+        >
+          <Printer size={16} />
+          [ PRINT PHYSICAL ARCHIVE ]
+        </button>
         <button 
           onClick={() => setSelectedGuide(null)}
           className="px-6 py-3 border border-[var(--border-color)] hover:border-[var(--accent-primary)] text-[var(--text-secondary)] hover:text-[var(--accent-primary)] transition-colors font-mono tracking-widest text-sm uppercase"
@@ -244,7 +259,118 @@ export function GuidesView() {
         Keep a close eye on the red skin around the cut. If you see dark red lines or streaks starting to travel up the arm or leg toward the heart, the infection has entered the bloodstream. This is a severe condition called sepsis. If you see these streaks, you must prioritize finding medical help or advanced antibiotics immediately.
       </div>
       
-      <div className="mt-12 flex justify-center pt-8 border-t border-[var(--border-color)]">
+      <div className="mt-12 flex flex-col sm:flex-row justify-center gap-4 pt-8 border-t border-[var(--border-color)]">
+        <button 
+          onClick={() => window.print()}
+          className="px-6 py-3 border border-[var(--border-color)] hover:border-[var(--accent-primary)] text-[var(--text-primary)] hover:text-[var(--accent-primary)] transition-colors font-mono tracking-widest text-sm uppercase flex items-center justify-center gap-2"
+        >
+          <Printer size={16} />
+          [ PRINT PHYSICAL ARCHIVE ]
+        </button>
+        <button 
+          onClick={() => setSelectedGuide(null)}
+          className="px-6 py-3 border border-[var(--border-color)] hover:border-[var(--accent-primary)] text-[var(--text-secondary)] hover:text-[var(--accent-primary)] transition-colors font-mono tracking-widest text-sm uppercase"
+        >
+          [ RETURN TO DIRECTORY ]
+        </button>
+      </div>
+    </div>
+  );
+
+  const guide00101 = (
+    <div className="space-y-8 text-[var(--text-secondary)] leading-relaxed text-left">
+      <div className="border-b border-[var(--border-color)] pb-6 mb-8">
+        <h1 className="font-mono text-2xl md:text-4xl font-bold tracking-widest text-[var(--accent-primary)] uppercase">
+          GUIDE 001.01: Long-Term Food Storage: The 3 Enemies of a Deep Pantry
+        </h1>
+      </div>
+
+      <p>
+        When a major supply chain collapse happens, grocery store shelves clear out in less than 24 hours. Storing bulk foods like white rice, dried beans, oats, and pasta is the cheapest way to guarantee your family has food.
+      </p>
+
+      <p>
+        However, if you just leave these foods in their original plastic grocery bags, they will spoil within months. To make your food last for <strong>20 to 30 years</strong>, you must defeat the three main enemies of storage: <strong>Oxygen, Moisture, and Pests.</strong>
+      </p>
+
+      <p>
+        Here is the simple, step-by-step method to seal your food like a pro using standard 5-gallon buckets and Mylar bags.
+      </p>
+
+      <div className="h-px w-full bg-[var(--border-color)] my-8"></div>
+
+      <h3 className="font-mono text-xl tracking-widest text-[var(--text-primary)] mb-6 uppercase flex items-center gap-3">
+        <span className="text-[var(--accent-primary)]">📦</span> Supply List
+      </h3>
+      <p className="mb-4">You can buy these online or at local hardware stores for very little money:</p>
+      <ul className="space-y-3 ml-4">
+        <li className="flex gap-4"><span className="text-[var(--accent-primary)] mt-1.5">▪</span><div><strong className="text-[var(--text-primary)]">Food-Grade 5-Gallon Plastic Buckets:</strong> Make sure they are marked "Food-Grade" (usually HDPE #2 plastic).</div></li>
+        <li className="flex gap-4"><span className="text-[var(--accent-primary)] mt-1.5">▪</span><div><strong className="text-[var(--text-primary)]">5-Gallon Mylar Bags:</strong> Thick, metallic bags that block out light and air completely.</div></li>
+        <li className="flex gap-4"><span className="text-[var(--accent-primary)] mt-1.5">▪</span><div><strong className="text-[var(--text-primary)]">Oxygen Absorbers (3000 CC size):</strong> Small packets that look like gel packs but chemically absorb all left-over oxygen inside the bag.</div></li>
+        <li className="flex gap-4"><span className="text-[var(--accent-primary)] mt-1.5">▪</span><div><strong className="text-[var(--text-primary)]">A Standard Household Clothes Iron or Hair Straightener:</strong> To heat-seal the bags.</div></li>
+      </ul>
+
+      <div className="h-px w-full bg-[var(--border-color)] my-8"></div>
+
+      <h3 className="font-mono text-xl tracking-widest text-[var(--text-primary)] mb-6 uppercase flex items-center gap-3">
+        <span className="text-[var(--accent-primary)]">🛠️</span> The Step-by-Step Packaging Protocol
+      </h3>
+
+      <h4 className="font-mono text-lg text-[var(--text-primary)] mt-6 mb-3 uppercase">Step 1: Drop and Fill</h4>
+      <ul className="space-y-3 ml-4 mb-6">
+        <li className="flex gap-4"><span className="text-[var(--accent-primary)] mt-1.5">▪</span><div>Open a 5-gallon Mylar bag and place it directly inside your empty plastic bucket.</div></li>
+        <li className="flex gap-4"><span className="text-[var(--accent-primary)] mt-1.5">▪</span><div>Pour your dry food (like white rice or pinto beans) straight into the bag until it is filled about 3 inches from the top.</div></li>
+      </ul>
+
+      <h4 className="font-mono text-lg text-[var(--text-primary)] mt-6 mb-3 uppercase">Step 2: Add the Oxygen Absorber</h4>
+      <ul className="space-y-3 ml-4 mb-6">
+        <li className="flex gap-4"><span className="text-[var(--accent-primary)] mt-1.5">▪</span><div>Drop one <strong>3000 CC Oxygen Absorber packet</strong> right on top of the food.</div></li>
+        <li className="flex gap-4"><span className="text-[var(--accent-primary)] mt-1.5">▪</span><div><em>Crucial Rule:</em> Keep your extra oxygen absorbers inside a tightly sealed Mason jar while you work. If they sit out in the open air for more than 10-15 minutes, they will absorb the room's air and become completely useless before you drop them in the bag.</div></li>
+      </ul>
+
+      <h4 className="font-mono text-lg text-[var(--text-primary)] mt-6 mb-3 uppercase">Step 3: Heat-Seal the Lid</h4>
+      <ul className="space-y-3 ml-4 mb-6">
+        <li className="flex gap-4"><span className="text-[var(--accent-primary)] mt-1.5">▪</span><div>Pull the top edges of the Mylar bag straight and flat against each other.</div></li>
+        <li className="flex gap-4"><span className="text-[var(--accent-primary)] mt-1.5">▪</span><div>Press out as much trapped air with your hands as you can.</div></li>
+        <li className="flex gap-4"><span className="text-[var(--accent-primary)] mt-1.5">▪</span><div>Take your hot clothes iron or hair straightener and run it slowly along the top 1 inch of the bag. The heat will melt the plastic layer inside the Mylar together, creating a completely airtight weld. Leave a tiny 1-inch gap open at the very corner for one last air-squeeze, then seal it completely shut.</div></li>
+      </ul>
+
+      <h4 className="font-mono text-lg text-[var(--text-primary)] mt-6 mb-3 uppercase">Step 4: Seal the Outer Bucket</h4>
+      <ul className="space-y-3 ml-4 mb-8">
+        <li className="flex gap-4"><span className="text-[var(--accent-primary)] mt-1.5">▪</span><div>Hammer the plastic lid onto the 5-gallon bucket.</div></li>
+        <li className="flex gap-4"><span className="text-[var(--accent-primary)] mt-1.5">▪</span><div><em>Note:</em> The plastic bucket does not need to be airtight. Its only job is to protect the fragile metal Mylar bag inside from getting punctured by mice, tools, or sharp edges.</div></li>
+      </ul>
+
+      <div className="h-px w-full bg-[var(--border-color)] my-8"></div>
+
+      <h3 className="font-mono text-xl tracking-widest text-[var(--text-primary)] mb-6 uppercase flex items-center gap-3">
+        <span className="text-[var(--accent-primary)]">🕒</span> The 24-Hour Inspection
+      </h3>
+      <p className="mb-4">Within 12 to 24 hours, the oxygen absorber will pull all the remaining air out of the bag.</p>
+
+      <blockquote className="border-l-2 border-[var(--accent-primary)] pl-6 py-2 bg-[var(--bg-secondary)]/30 text-base italic mb-8">
+        <strong className="text-[var(--text-primary)] font-mono not-italic tracking-wider uppercase block mb-2">THE VISUAL TEST:</strong>
+        The Mylar bag should look completely crushed and vacuum-packed, tight against the shape of the rice or beans inside. If it looks tight like a brick, your seal is perfect. If it still looks loose and puffy after a day, your heat seal has a tiny leak. Cut the top off, drop a fresh absorber in, and re-iron it.
+      </blockquote>
+
+      <h3 className="font-mono text-xl tracking-widest text-[var(--text-primary)] mb-6 uppercase flex items-center gap-3">
+        <span className="text-[var(--accent-primary)]">🚫</span> 3 Common Foods That Will Spoil If You Try This
+      </h3>
+      <p className="mb-4">Not all dry foods can be stored long-term. Avoid putting these items in Mylar bags, or they will turn rancid quickly:</p>
+      <ol className="space-y-3 ml-12 mb-8 list-decimal list-inside text-[var(--text-primary)]">
+        <li><strong>Brown Rice:</strong> Unlike white rice, brown rice contains natural oils that go bad and sour within a year, even without oxygen.</li>
+        <li><strong>Whole Wheat Flour:</strong> Flour packs too tightly and contains moisture that can create deadly bacteria if sealed completely flat. Store whole wheat berries instead, and grind them when needed.</li>
+        <li><strong>Salt & Sugar:</strong> These two items <strong>never</strong> spoil. You can store them in buckets, but <strong>never add an oxygen absorber to them</strong>, or they will chemically turn into a solid, unuseable block of stone.</li>
+      </ol>
+      
+      <div className="mt-12 flex flex-col sm:flex-row justify-center gap-4 pt-8 border-t border-[var(--border-color)]">
+        <button 
+          onClick={() => window.print()}
+          className="px-6 py-3 border border-[var(--border-color)] hover:border-[var(--accent-primary)] text-[var(--text-primary)] hover:text-[var(--accent-primary)] transition-colors font-mono tracking-widest text-sm uppercase flex items-center justify-center gap-2"
+        >
+          <Printer size={16} />
+          [ PRINT PHYSICAL ARCHIVE ]
+        </button>
         <button 
           onClick={() => setSelectedGuide(null)}
           className="px-6 py-3 border border-[var(--border-color)] hover:border-[var(--accent-primary)] text-[var(--text-secondary)] hover:text-[var(--accent-primary)] transition-colors font-mono tracking-widest text-sm uppercase"
@@ -341,6 +467,28 @@ export function GuidesView() {
                   Treating infected wounds without antibiotics. Rely on proper cleaning, natural anti-bacterials, and 3-step protocol.
                 </p>
               </div>
+
+              {/* Tile 4: Guide 001.01 */}
+              <div 
+                onClick={() => setSelectedGuide('FOOD')}
+                className="group border border-[var(--border-color)] bg-[var(--bg-secondary)] p-8 text-left cursor-pointer hover:border-[var(--accent-primary)] transition-all duration-300 relative overflow-hidden"
+              >
+                <div className="absolute top-0 left-0 w-[2px] h-0 bg-[var(--accent-primary)] group-hover:h-full transition-all duration-500"></div>
+                <div className="flex justify-between items-start mb-6 w-full">
+                  <span className="text-[var(--accent-primary)] font-mono text-xs tracking-widest border border-[var(--accent-primary)] px-2 py-1">
+                    GUIDE 001.01
+                  </span>
+                  <span className="text-[var(--text-secondary)] font-mono text-xl group-hover:text-[var(--accent-primary)] transition-colors">
+                    +]
+                  </span>
+                </div>
+                <h3 className="font-mono text-xl text-[var(--text-primary)] font-bold mb-4 uppercase leading-tight group-hover:text-[var(--accent-primary)] transition-colors">
+                  Long-Term Food Storage
+                </h3>
+                <p className="text-[var(--text-secondary)] text-sm mb-6 line-clamp-3">
+                  Defeat the three main enemies of storage: Oxygen, Moisture, and Pests using standard 5-gallon buckets and Mylar bags.
+                </p>
+              </div>
             </div>
           </motion.div>
         ) : (
@@ -354,6 +502,7 @@ export function GuidesView() {
              {selectedGuide === 'EMP' && guide00104}
              {selectedGuide === 'WATER' && guide00103}
              {selectedGuide === 'MEDICAL' && guide00102}
+             {selectedGuide === 'FOOD' && guide00101}
           </motion.div>
         )}
       </AnimatePresence>
